@@ -1,6 +1,10 @@
 ---
-- hosts:  localhost
+- hosts:  server_test
   become:  yes
   roles:
     - docker_test
+    
+- hosts:  server_prod
+  become:  yes
+  roles:
     - docker_prod
