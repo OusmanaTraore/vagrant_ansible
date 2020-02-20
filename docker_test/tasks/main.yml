@@ -19,6 +19,9 @@
   yum:
     name: docker-ce,docker-ce-cli,containerd.io
     state: present
+- name: config du docker
+  shell:
+    cmd: sed -i 's/-H fd:\/\//-H fd:\/\/ -H tcp:\/\/0.0.0.0:5000/' /usr/lib/systemd/system/docker.service
 - name: start docker
   systemd:
     name: docker
