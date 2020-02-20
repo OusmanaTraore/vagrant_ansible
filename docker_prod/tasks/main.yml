@@ -26,3 +26,8 @@
     enabled: yes
     ports:
       - "0.0.0.0:9200/tcp"
+- name: Add user vagrant to docker group
+      user:
+        name: vagrant
+        groups: docker
+        append: yes
