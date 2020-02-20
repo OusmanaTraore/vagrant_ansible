@@ -20,8 +20,12 @@
     name: docker-ce,docker-ce-cli,containerd.io
     state: present
 - name: config du docker
+  yum:
+    name: epel-release
+    state: present
+- name: config du docker py
   shell:
-    cmd: sed -i 's/-H fd:\/\//-H fd:\/\/ -H tcp:\/\/0.0.0.0:5000/' /usr/lib/systemd/system/docker.service
+    cmd: pip install docker-py
 - name: start docker
   systemd:
     name: docker
@@ -32,4 +36,3 @@
     name: vagrant
     groups: docker
     append: yes
-
