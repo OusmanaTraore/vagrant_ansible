@@ -19,9 +19,13 @@
   yum:
     name: docker-ce,docker-ce-cli,containerd.io
     state: present
-- name: config du docker
+- name: epel
   yum:
     name: epel-release
+    state: present
+- name: pip
+  yum:
+    name: python-pip
     state: present
 - name: config du docker py
   shell:
