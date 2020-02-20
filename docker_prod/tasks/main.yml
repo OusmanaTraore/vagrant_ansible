@@ -30,9 +30,6 @@
 - name: config du docker py
   shell:
     cmd: pip install docker-py
-- name: config du docker py
-  shell:
-    cmd: pip install docker-py
 - name: start docker
   systemd:
     name: docker
