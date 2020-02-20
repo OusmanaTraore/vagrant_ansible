@@ -28,7 +28,7 @@
     state: started
     enabled: yes
 - name: Add user vagrant to docker group
-      user:
-        name: vagrant
-        groups: docker
-        append: yes
+    user:
+      name: vagrant
+      groups: docker
+      append: yes
