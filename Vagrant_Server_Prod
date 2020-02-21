@@ -8,6 +8,9 @@ Vagrant.configure("2") do |config|
 
 # Synchronisation entre  la machine hôte et la machine virtuelle
   config.vm.network "forwarded_port", guest: 22, host: 9200
+  
+# ouverture du port 8080 du serveur prod pour obtenir le rendu de l'application  
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
 # Création et synchronisation entre le répertoire d'accueil de la machine hôte et la machine virtuelle
   config.vm.synced_folder "./data", "/vagrant_data", create: true 
