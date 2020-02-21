@@ -21,12 +21,21 @@ L' approvisionnement des deux serveurs Test et Prod se fait avec ansible via le 
  Ces roles contiendront les informations pour l'installation de :
  
   Pour la docker_prod:
-  - repo de docker
+  - yum-utils ,device-mapper-persistent-data, lvm2 ( Création d'un volume en le rendant persistent)
+  - repo de docker  (config)
+  - docker-ce,docker-ce-cli,containerd.io
+  - epel-release
+  - pip
   - python-pip
  
 
  Pour la docker_test:
-  - repo de docker
+
+  - yum-utils ,device-mapper-persistent-data, lvm2 ( Création d'un volume en le rendant persistent)
+  - repo de docker  (config)
+  - docker-ce,docker-ce-cli,containerd.io
+  - epel-release
+  - pip
   - python-pip 
 
 
