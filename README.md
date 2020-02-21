@@ -16,7 +16,8 @@ Le Serveur Test contient (java jdk et git).
 
 Le Serveur Prod contient (java jdk  et git ).
 
-L' approvisionnement des deux serveurs Test et Prod se fait avec ansible via le serveur Slave_Jenkins.
+L' approvisionnement des deux serveurs Test et Prod se fait avec ansible via le serveur Slave_Jenkins
+, via les roles Ansible docker_prod et docker_test.
 
 La branche 'develop' sera utilisée par le serveur Test  (test) au cours des 
 changements de codes, tandis que la branche master sera utilisée pour la mise en production (déploiement). 
