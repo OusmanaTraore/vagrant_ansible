@@ -8,4 +8,14 @@ Le fichier Vagrant_Server_Test configure la machine de test, accessible via le p
 
 Le fichier Vagrant_Server_Prod configure la machine de prod, accessible via le port 9200 en ssh.
 
-aaaa
+Le Serveur Master_Jenkins contient (java jdk, git , maven, jenkins, ansible et docker).
+
+Le Serveur Slave_Jenkins contient (java jdk, git , maven, ansible et docker).
+
+Le Serveur Test contient (java jdk et git).
+
+Le Serveur Prod contient (java jdk  et git ).
+
+L' approvisionnement des deux serveurs Test et Prod se fait avec ansible via le serveur Slave_Jenkins.
+
+Lea branche 'develop' sera utilisée par le serveur Test  (test) aucours des changements de codes, tandis que la branche master sera utilisée pour la mise en production (déploiement). 
