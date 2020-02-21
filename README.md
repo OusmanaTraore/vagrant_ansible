@@ -22,7 +22,7 @@ L' approvisionnement des deux serveurs Test et Prod se fait avec ansible via le 
  
   Pour la docker_prod:
   - yum-utils ,device-mapper-persistent-data, lvm2 ( Création d'un volume en le rendant persistent)
-  - repo de docker  (config)
+  - repo de docker  (config )
   - docker-ce,docker-ce-cli,containerd.io
   - epel-release
   - pip
